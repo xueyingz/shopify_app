@@ -1,0 +1,25 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3498eb4fede9f6b82fc711c938e3a7e4"
+name = "production-test"
+handle = "production-test-4"
+application_url = "http://shopify-local.giikin.com:3000/"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+dev_store_url = "zxy-test.myshopify.com"
+automatically_update_urls_on_dev = false
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_inventory,write_customers,write_discounts,write_inventory,write_products"
+
+[auth]
+redirect_urls = [ "http://shopify-local.giikin.com:3000/api/auth" ]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false

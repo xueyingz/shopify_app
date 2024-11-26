@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "b40d5d2238bd8113944efb5cba4cfa9b"
+name = "test2"
+handle = "test2-1090"
+application_url = "https://anyone-remembered-elizabeth-len.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "zxy-test.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, read_products, read_inventoryItems"
+
+[auth]
+redirect_urls = [
+  "https://anyone-remembered-elizabeth-len.trycloudflare.com/auth/callback",
+  "https://anyone-remembered-elizabeth-len.trycloudflare.com/auth/shopify/callback",
+  "https://anyone-remembered-elizabeth-len.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
