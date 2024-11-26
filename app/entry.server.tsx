@@ -8,8 +8,13 @@ import {
 import { isbot } from "isbot";
 import { addDocumentResponseHeaders } from "./shopify.server";
 
-const ABORT_DELAY = 5000;
+import dotenv from "dotenv";
+console.log('-====',process.env.NODE_ENV);
+const envFile = `.env.${process.env.NODE_ENV || 'development'}`;
+console.log('envFile', process.env);
+dotenv.config({ path: envFile });
 
+const ABORT_DELAY = 5000;
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
